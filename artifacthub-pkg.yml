@@ -1,0 +1,34 @@
+# Artifact Hub package metadata file
+
+version: 0.1.0
+name: runc-vuln-gadget
+category: security
+displayName: runc-vuln-gadget
+createdAt: 2024-02-22T15:08:46+01:00
+description: A gadget to detect runc vulnerabilities
+license: GPL-2.0-only
+homeURL: https://github.com/alban/runc-vuln-gadget
+containersImages:
+  - name: gadget
+    image: ghcr.io/alban/runc-vuln-gadget:latest
+    platforms:
+      - linux/amd64
+      - linux/arm64
+  - name: gadget-alternative-location
+    image: alban.azurecr.io/runc-vuln-gadget:latest
+    platforms:
+      - linux/amd64
+      - linux/arm64
+keywords:
+  - gadget
+  - vulnerability
+links:
+  - name: source
+    url: https://github.com/alban/runc-vuln-gadget
+changes:
+  - kind: added
+    description: Initial release
+provider:
+  name: Inspektor Gadget
+recommendations:
+  - url: https://artifacthub.io/packages/helm/gadget/gadget
